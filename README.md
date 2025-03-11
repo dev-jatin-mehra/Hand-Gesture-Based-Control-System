@@ -33,6 +33,18 @@ flowchart TD
     F --> G[Trigger Actions in Applications]
 ```
 
+## Key Mappings
+> **Note:** Don't hand sign like emojis.
+
+| **Gesture**                  | **Mapped Key**   | **Description(GameMovements)**  |
+|------------------------------|------------------|---------------------------------|
+| ☝️ **Index Finger Up**       | `W` (⬆️)        | Move Forward                    |
+| 🤞 **Index + Middle Up**     | `A` (⬅️)        | Move Left                       |
+| ✌️ **Middle + Pinky Up**     | `D` (➡️)        | Move Right                      |
+| 🤙 **Pinky Finger Up**       | `S` (⬇️)        | Move Backward                   |
+| ✋ **Index + Pinky Up**      | `Space` (⏫)    | Jump                            |
+| 🤚 **Middle Finger Up**      | `CapsLock` (🏃‍♂️) | Sprint                          |
+
 ### Project Structure
 ```
 hand-gesture-control/
