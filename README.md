@@ -47,7 +47,7 @@ hand-gesture-control/
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/hand-gesture-control.git
+   git clone https://github.com/dev-jatin-mehra/hand-gesture-based-control-system.git
    cd hand-gesture-control
    ```
 2. Install dependencies:
