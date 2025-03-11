@@ -1,33 +1,50 @@
 # Hand Gesture-Based Control System
 
 ## Overview
-
-This project introduces a hand gesture-based control system that enables users to interact with their devices using real-time hand tracking. By leveraging computer vision techniques, the system interprets hand movements to simulate key presses, mouse interactions, and other input actions.
+This project introduces a hand gesture-based control system that enables users to interact with their devices using real-time hand tracking. By leveraging computer vision techniques, the system interprets hand movements to simulate key presses, making it useful for touchless control in various applications.
 
 ## Features
-
-- **Cursor Control**: Move the mouse pointer using hand gestures.
-- **Clicking & Scrolling**: Perform left/right clicks and scroll through content with specific hand signals.
-- **Air Typing**: Simulate keyboard typing without physical contact.
-- **Customizable Actions**: Map gestures to different keybindings for various applications.
+- **Gesture-Based Keypresses**: Map hand gestures to keyboard keys for seamless interaction.
+- **Air Typing**: Simulate typing actions without a physical keyboard.
+- **Customizable Key Bindings**: Modify gesture mappings for different applications.
+- **Touchless Control**: Reduce reliance on physical hardware for accessibility and convenience.
 
 ## Potential Use Cases
-
-- **Accessibility**: Helps individuals with mobility impairments interact with digital devices.
+- **Accessibility**: Assist individuals with mobility impairments by enabling hands-free device interaction.
 - **Presentation Control**: Navigate slides and documents using simple hand gestures.
-- **Creative Applications**: Enhance digital art creation by using gestures for brush selection and movements.
-- **Gaming**: Control characters and actions in interactive games (e.g., racing, shooting, and puzzle games).
-- **Touchless Interfaces**: Minimize physical contact in public or shared computing environments.
+- **Creative Applications**: Use gestures for tool selection and interactions in digital art and design software.
+- **Gaming**: Control characters and perform in-game actions using gestures (e.g., moving, jumping, shooting).
+- **Virtual Keyboards**: Enable air typing for text input without a physical keyboard.
 
 ## Technologies Used
+- **OpenCV**: Real-time video processing and hand tracking.
+- **MediaPipe**: Gesture recognition and landmark detection.
 
-- OpenCV for real-time hand tracking
-- MediaPipe for gesture recognition
-- PyAutoGUI for simulating keyboard and mouse actions
-- Flask (if integrating with a web-based interface)
+## How It Works
+The system follows these steps to process hand gestures and simulate keypresses:
+
+```mermaid
+flowchart TD
+    A[Capture Webcam Feed] --> B[Process Frame]
+    B --> C[Detect Hand Landmarks]
+    C --> D[Analyze Finger Positions]
+    D --> E[Map Gestures to Key Presses]
+    E --> F[Simulate Key Inputs]
+    F --> G[Trigger Actions in Applications]
+```
+
+### Project Structure
+```
+hand-gesture-control/
+├── hand_tracker.py       # Tracks hand movements and detects gestures
+├── key_mappings.py       # Stores key mappings for various gestures
+├── key_controller.py     # Simulates keypress events based on gestures
+├── game.py               # Runs the gesture recognition and key control system
+├── requirements.txt      # Lists project dependencies
+└── README.md             # Project documentation
+```
 
 ## Installation
-
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repo/hand-gesture-control.git
@@ -39,9 +56,8 @@ This project introduces a hand gesture-based control system that enables users t
    ```
 3. Run the application:
    ```bash
-   python game.py
+   python main.py
    ```
 
 ## Acknowledgments
-
-Special thanks to the open-source community for providing tools like OpenCV, MediaPipe, and PyAutoGUI that make real-time gesture control possible.
+Special thanks to the open-source community for providing tools like OpenCV, MediaPipe that make real-time gesture control possible.

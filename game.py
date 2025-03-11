@@ -12,11 +12,8 @@ while cap.isOpened():
     if not ret:
         break
 
-    # Flip frame for a mirror effect
     frame = cv2.flip(frame, 1)
     h, w, _ = frame.shape
-
-    # Process hand tracking
     results = hand_tracker.process_frame(frame)
     active_keys = set()
 
@@ -45,17 +42,17 @@ while cap.isOpened():
 
             # Movement Conditions
             if index_raised and not (middle_raised or pinky_raised):
-                active_keys.add(KEY_MAP["forward"])  # Move forward (W)
+                active_keys.add(KEY_MAP["forward"])  # W
             elif pinky_raised and not (index_raised or middle_raised):
-                active_keys.add(KEY_MAP["backward"])  # Move backward (S)
+                active_keys.add(KEY_MAP["backward"])  # S
             elif index_raised and pinky_raised and not middle_raised:
-                active_keys.add(KEY_MAP["jump"])  # Jump (Space)
+                active_keys.add(KEY_MAP["jump"])  # Space
             elif index_raised and middle_raised and not pinky_raised:
-                active_keys.add(KEY_MAP["left"])  # Move left (A)
+                active_keys.add(KEY_MAP["left"])  # A
             elif middle_raised and pinky_raised and not index_raised:
-                active_keys.add(KEY_MAP["right"])  # Move right (D)
+                active_keys.add(KEY_MAP["right"])  # D
             elif middle_raised and not (index_raised or thumb_raised or pinky_raised):
-                active_keys.add(KEY_MAP["sprint"])  # Sprint (Shift)
+                active_keys.add(KEY_MAP["sprint"])  # CapsLock
 
     # Simulate key presses
     for key in active_keys:

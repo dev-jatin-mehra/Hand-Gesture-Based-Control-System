@@ -6,5 +6,5 @@ KEY_MAP = {
     "left": "a",
     "right": "d",
     "jump": Key.space,
-    "sprint": Key.shift,
+    "sprint": Key.caps_lock,
 }
