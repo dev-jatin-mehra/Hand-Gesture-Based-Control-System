@@ -36,14 +36,14 @@ flowchart TD
 ## Key Mappings
 > **Note:** Don't hand sign like emojis.
 
-| **Gesture**                  | **Mapped Key**   | **Description(GameMovements)**  |
-|------------------------------|------------------|---------------------------------|
-| ☝️ **Index Finger Up**       | `W` (⬆️)        | Move Forward                    |
-| 🤞 **Index + Middle Up**     | `A` (⬅️)        | Move Left                       |
-| ✌️ **Middle + Pinky Up**     | `D` (➡️)        | Move Right                      |
-| 🤙 **Pinky Finger Up**       | `S` (⬇️)        | Move Backward                   |
-| ✋ **Index + Pinky Up**      | `Space` (⏫)    | Jump                            |
-| 🤚 **Middle Finger Up**      | `CapsLock` (🏃‍♂️) | Sprint                          |
+ **Gesture**                  | **Mapped Key**   |
+------------------------------|------------------|
+ ☝️ **Index Finger Up**       | `W`         
+ 🤞 **Index + Middle Up**     | `A`          
+ ✌️ **Middle + Pinky Up**     | `D`          
+ 🤙 **Pinky Finger Up**       | `S`          
+ ✋ **Index + Pinky Up**      | `Space`     
+ 🤚 **Middle Finger Up**      | `CapsLock`  
 
 ### Project Structure
 ```
